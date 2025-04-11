@@ -21,4 +21,4 @@ def create_article(request):
 		})
 
 	elif request.method == 'GET':
-		return render(request, 'blog/form.html', {})
+		return render(request, 'blog/form.html', {"articles": request.user.articles.all()})
