@@ -8,5 +8,5 @@ class Article(models.Model):
 	timestamp = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return f"{self.title} | {self.author.full_name}"
+		return f"{self.title} | {self.author.get_full_name()}"
 
